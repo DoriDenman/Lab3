@@ -27,10 +27,10 @@ public class Main {
         DataFile db = new DataFile("dbtest.csv");
 
         // This is "sort of" pushing out information to all the observers
-        for (int i=0; i<10; i++) {
+        for (;;) {// infinate loop
 
             // simulated subject data change
-            stockGenerator();
+            StockMarketSubject.stockGenerator();
             weatherGenerator();
 
             // update the news
@@ -43,7 +43,7 @@ public class Main {
             db.addData("and another");
          
             // update the stock watcher 
-            System.out.printf("DOW %.2f S&P %.2f 3M %.2f Microsoft %.2f %n", dow, snp, mmm, msft);
+           // System.out.printf("DOW %.2f S&P %.2f 3M %.2f Microsoft %.2f %n", dow, snp, mmm, msft);
 
             try {
                 Thread.sleep(600);
@@ -55,7 +55,7 @@ public class Main {
     // _____________________________________________________________________________
     // _____________________________________________________________________________
 
-    public static void stockGenerator() {
+   /* public static void stockGenerator() {
         // Generate some random stock data
 
         double randDouble;
@@ -101,7 +101,7 @@ public class Main {
             }
             msft = msft + randDouble*msft;        }
 
-    }
+    }*/
 
     // _____________________________________________________________________________
     // _____________________________________________________________________________
