@@ -37,7 +37,7 @@ public class Main {
             String temp = "";
             temp += String.format("TEMP %d PREC %d%% AIR %d %n", temperature, precipitation, airQuality);
             temp += String.format("DOW %.2f S&P %.2f 3M %.2f Microsoft %.2f %n", dow, snp, mmm, msft);
-            news.redraw(temp);
+            news.redraw(temp); //updates graphic window
 
             // update the database
             db.addData("and another");
